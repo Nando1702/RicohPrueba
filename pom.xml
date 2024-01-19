@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Ricoh</groupId>
+	<artifactId>Ricoh</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ricoh</name>
+	
+	 <build>
+  <!-- Este plugin hace que el Java no se te ponga en Java 5 porque el Eclipse es retrasado -->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <archive>
+                        <index>true</index>
+                        <manifest>
+  <!-- Aqui va tu clase donde esta el main por si te da el Error: Couldn't find or load main class -->                      
+                            <mainClass>test.Testmain</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                
+            </plugin>
+        </plugins>
+  </build>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>5.2.0</version> <!-- Asegúrate de utilizar la última versión
+			disponible -->
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>5.2.0</version> <!-- Asegúrate de utilizar la última versión
+			disponible -->
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.14.1</version> <!-- Utiliza la versión más reciente de
+			Log4j2 -->
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.14.1</version> <!-- Utiliza la versión más reciente de
+			Log4j2 -->
+		</dependency>
+	</dependencies>
+</project>
